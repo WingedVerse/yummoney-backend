@@ -20,7 +20,7 @@ public class QuoteController {
         return new ResponseEntity<>(service.create(quote), HttpStatus.CREATED);
     }
 
-    @GetMapping("/admin/dashboard")
+    @GetMapping("/all-quotes")
     public ResponseEntity<List<Quote>> getAll() {
         return new ResponseEntity<>(service.getAllQuotes(), HttpStatus.OK);
     }

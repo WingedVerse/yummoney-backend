@@ -3,6 +3,7 @@ package com.backend.yumonney;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -11,7 +12,8 @@ public class QuoteService {
     private QuoteRepository repository;
 
     public Quote create(Quote quote){
-        if (quote.getFullName()!= null && quote.getEmail()!= null && quote.getPhone()!= 0) {
+        if (quote.getFullName()!= null && quote.getEmail()!= null && quote.getPhone()!= null) {
+            quote.setDate(LocalDate.now());
             return repository.save(quote);
         }
         else {
