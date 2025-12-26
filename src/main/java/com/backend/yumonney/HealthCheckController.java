@@ -11,15 +11,16 @@ import java.util.List;
 @CrossOrigin
 public class HealthCheckController {
 
-    @PostMapping("/api")
+    @GetMapping("/api")
     public ResponseEntity<?> check() {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PostMapping("/health-check")
+    @GetMapping("/health-check")
     public ResponseEntity<?> healthCheck() {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
+
 
