@@ -9,17 +9,17 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
 public class HealthCheckController {
 
-    @PostMapping("/")
-    public ResponseEntity<Quote> check() {
+    @PostMapping("/api")
+    public ResponseEntity<?> check() {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/health-check")
-    public ResponseEntity<List<Quote>> healthCheck() {
+    @PostMapping("/health-check")
+    public ResponseEntity<?> healthCheck() {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
+
